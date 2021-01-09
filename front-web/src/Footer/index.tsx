@@ -18,7 +18,7 @@ function Footer(){
                 </a>
 
                 <a href="https://www.instagram.com/welton_dias_2018/?hl=pt-br" target="_new">
-                    <InstagramIcon />
+                    <InstagramIcon /> 
                 </a>
             </div>
         </footer>
