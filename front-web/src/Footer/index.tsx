@@ -7,7 +7,7 @@ function Footer(){
     return (
 
         <footer className="main-footer">
-            App desenvolvido durante a 2ª ed. do evento Semana DevSuperior
+            App desenvolvido por ©Welton Dias durante a 2ª ed. do evento Semana DevSuperior
             <div className="footer-icons">
                 <a href="https://www.youtube.com/channel/UCySA_C75gY-_fPPp8I7LmFA" target="_new">
                     <YoutubeIcon />
