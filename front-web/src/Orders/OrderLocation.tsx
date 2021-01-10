@@ -38,8 +38,8 @@ function OrderLocation({ onChangeLocation}: Props) {
             position: {
               lat: item.center[1],
               lng: item.center[0]
-            },
-            place: item.place_name,
+            }
+         //   place: item.place_name,
           });
         });
       
@@ -64,7 +64,7 @@ function OrderLocation({ onChangeLocation}: Props) {
             </h3>
                 <div className="filter-container">
                     <AsyncSelect
-                        placeholder="Digite o endereço de entrega"
+                        placeholder="Digite o endereço para entregar o pedido"
                         className="filter"
                         loadOptions={loadOptions}
                         onChange={value => handleChangeSelect(value as Place)}

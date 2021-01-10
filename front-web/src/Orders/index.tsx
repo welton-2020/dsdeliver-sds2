@@ -11,7 +11,7 @@ import OrderLocation from "./OrderLocation";
 import OrderSummary from "./OrderSummary";
 import Footer from "../Footer";
 import { checkIsSelected } from "./helpers";
-import { isTemplateExpression } from "typescript";
+//import { isTemplateExpression } from "typescript";
 
 function Orders(){
 
