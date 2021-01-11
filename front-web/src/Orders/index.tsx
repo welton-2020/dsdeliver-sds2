@@ -11,7 +11,7 @@ import OrderLocation from "./OrderLocation";
 import OrderSummary from "./OrderSummary";
 import Footer from "../Footer";
 import { checkIsSelected } from "./helpers";
-//import { isTemplateExpression } from "typescript";
+
 
 function Orders(){
 
@@ -41,7 +41,7 @@ function Orders(){
     }
   }
 
-  const handleSubmit = () => {
+ /* const handleSubmit = () => {
     const productsIds = selectedProducts.map(({ id }) => ({ id }));
     const payload = {
       ...orderLocation!,
@@ -55,6 +55,30 @@ function Orders(){
       .catch(() => {
         toast.warning('Erro ao enviar pedido');
       })
+  } */
+
+
+  const handleSubmit = () => {
+    const productsIds = selectedProducts.map(({ id }) => ({ id }));
+    const payload = {
+      ...orderLocation!,
+      products: productsIds
+    }
+    
+    if (payload.products.length > 0) {
+      console.log("Enviado", payload)
+      if (payload.address) {
+        saveOrder(payload)
+          .then((response) => {
+            toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}`);
+            setSelectedProducts([]);
+            setOrderLocation(undefined);
+          })
+          .catch(() => {
+            toast.warning('Erro ao enviar pedido');
+          })
+      } else { toast.warning('Selecione um endereço'); }
+    } else { toast.warning('Selecione um produto'); }
   }
 
 
