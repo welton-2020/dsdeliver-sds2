@@ -23,10 +23,7 @@ function OrderSummary( {amount, totalPrice,onSubmit}: Props){
                     VALOR TOTAL
                 </span>
                 </div>
-                <button 
-                    className="order-summary-make-order"
-                    onClick={onSubmit}
-                >
+                <button className="order-summary-make-order" onClick={onSubmit} >
                     FAZER PEDIDO
                 </button>
             </div>

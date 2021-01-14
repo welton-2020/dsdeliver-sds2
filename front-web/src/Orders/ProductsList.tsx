@@ -1,8 +1,8 @@
-//import { type } from "os";
 import { checkIsSelected } from "./helpers";
 import ProductCard from "./ProductCard";
 import { Product } from "./types";
 
+//criando a prop, passando parametros para o componente
 type Props = {
     products: Product[];
     selectedProducts: Product[];
@@ -16,7 +16,7 @@ function ProductsList({products, selectedProducts, onSelectProduct}: Props){
         <div className="orders-list-container">
             <div className="orders-list-items">
                 {products.map(product => (
-                        <ProductCard 
+                        <ProductCard
                         key={product.id}
                          product={product}
                          onSelectProduct={onSelectProduct}
