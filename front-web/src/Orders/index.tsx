@@ -64,7 +64,7 @@ function Orders(){
             setOrderLocation(undefined);
           })
           .catch(() => {
-            toast.warning('Erro ao enviar pedido');
+            toast.warning('Erro ao enviar o pedido');
           })
       } else { toast.warning('Selecione um endereço'); }
     } else { toast.warning('Selecione um produto'); }
